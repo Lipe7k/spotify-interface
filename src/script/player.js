@@ -239,6 +239,8 @@ function renderMusicInfo(music) {
     musicCard.addEventListener('click', () => {
         playMusic(music);
         updateSelectedMusic(musicCard);
+        isPlaying = false;
+        togglePlayPause()
     });
 
     boxMusicContainer.appendChild(musicCard);
