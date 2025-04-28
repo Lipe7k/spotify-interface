@@ -66,14 +66,19 @@
             <div class="playlist-selected">
                 <div class="content-playlist">
                     <div class="info-playlist">
-                        <img src="images/playlist-photo.jpg" alt="Playlist photo">
-                        <div class="info-text-play">
+                        <div class="right-playlist-info">
+                            <img src="images/playlist-photo.jpg" alt="Playlist photo">
+                            <div class="info-text-play">
                             <h1>2k25</h1>
                             <div >
                                 <img src="images/pfp.jpg" alt="">
-                                <h4>Forcex <span>&bull; 5 Songs, 16 min 45 sec</span></h4>
+                                <h4>Forcex <span>&bull; <span id="contMusics">0</span> Songs, 16 min 45 sec</span></h4>
 
                             </div>
+                        </div>
+                        </div>
+                        <div class="left-playlist-info">
+                            <button id="addSongBtn" onclick="openModal()"><i class="bi bi-plus-circle"></i></button>
                         </div>
                     </div>
 
@@ -86,6 +91,7 @@
                     <div class="box-music">
 
                     </div>
+
                 </div>
             </div>
         </div>
@@ -98,10 +104,10 @@
     <section class="play-music">
         <div class="container">
             <div class="info-music">
-                <img src="images/foto-musica-selecionada.jpg" alt="" id="imgMusic">
+                <img src="images/feel-it-img.jpg" alt="" id="imgMusic">
                 <div class="text-nome-msc">
-                <h3><a href="" id="nameMusic">Embalo</a></h3>
-                <span><a href="" id="authorMusic">Ryu the runner</a></span>
+                <h3><a href="" id="nameMusic">Feel It</a></h3>
+                <span><a href="" id="authorMusic">D4vd</a></span>
                 </div>
             </div>
             <div class="player-controls">
@@ -134,8 +140,48 @@
         </div>
     </section>
 
+    <div class="add-song-screen" id="add-song-screen"> 
+        <div class="box-add-song">
+            <h2>Add your song</h2>
+            <div class="content-song-screen">
+                <div class="group-input-info">
+                    <div class="box-input">
+                        <span>Title</span>
+                        <input type="text" id="title-msc">
+                    </div>
+         
+                     <div class="box-input">
+                         <span>Author</span>
+                         <input type="text" id="author-msc">
+                     </div>
+                   </div>
+        
+                    <div class="box-add-file-song">
+                        <div>
+                            <span>Song file (MP3)</span>
+                            <label for="file" class="custom-file-upload">Choose Song</label>
+                            <input type="file" id="file">
+                        </div>
+                        <div>
+                            <span for="Image">Image</span>
+                            <label for="img-file" class="custom-file-upload">Choose Image</label>
+                            <input type="file" id="img-file">
+                        </div>
+                    </div>
+
+                    
+
+            </div>
+            <div class="buttons-add-song">
+                    <p id="mensagem"></p>
+                    <button id="add-song-btn">Add Song</button>
+            </div>
+        </div>
+    </div>
+
 
     <script src="src/script/player.js"></script>
+    <script src="src/script/addNewSong.js"></script>
       
       
       

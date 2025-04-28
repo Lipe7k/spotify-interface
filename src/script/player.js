@@ -188,6 +188,7 @@ function renderMusicInfo(music) {
     musicCard.classList.add("music-card");
 
     const img = document.createElement("img");
+    console.log(music.cover)
     img.src = music.cover;
     img.alt = music.name;
     img.classList.add("music-cover");
@@ -257,4 +258,11 @@ function updateSelectedMusic(musicCard) {
     musicCard.classList.add('selected');
 }
 
-musics.forEach(music => renderMusicInfo(music));
+const contMusic = document.querySelector("#contMusics")
+let contMusics = 0
+musics.forEach(music => {
+    renderMusicInfo(music) 
+    contMusics+=1
+});
+
+contMusic.innerHTML = contMusics
