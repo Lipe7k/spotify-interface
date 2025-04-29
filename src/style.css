@@ -222,24 +222,23 @@ main .content .playlist-group, .content .playlist-selected{
 
 .box-music {
   flex: 1;
-  overflow-y: auto;
   min-height: 0;
 }
 
-.box-music::-webkit-scrollbar {
+.playlist-selected::-webkit-scrollbar {
   width: 8px;
 }
 
-.box-music::-webkit-scrollbar-track {
+.playlist-selected::-webkit-scrollbar-track {
   background: transparent; 
 }
 
-.box-music::-webkit-scrollbar-thumb {
+.playlist-selected::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2); 
   border-radius: 4px;
 }
 
-.box-music::-webkit-scrollbar-thumb:hover {
+.playlist-selected::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.4); 
 }
 
