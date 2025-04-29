@@ -238,6 +238,7 @@ function renderMusicInfo(music) {
     musicCard.appendChild(musicInfo);
 
     musicCard.addEventListener('click', () => {
+        currentTime = 0;
         playMusic(music);
         updateSelectedMusic(musicCard);
         isPlaying = false;
