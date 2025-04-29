@@ -63,8 +63,18 @@ function playMusic(music) {
     audio.volume = Number(volumeControl.value) / 100;
     audio.play();
 
-    nameMusic.textContent = music.name.slice(0, 20) + "...";
-    authorMusic.textContent = music.author.slice(0, 30) + "...";
+
+    nameMusic.textContent = music.name.slice(0, 20);
+    authorMusic.textContent = music.author.slice(0, 30);
+
+    if(music.name.length > 20){
+        nameMusic.textContent += "..."
+    }
+
+    if(music.author.length > 30){
+        authorMusic.textContent += "..."
+    }
+
     imgMusic.src = music.cover;
 
     interval = setInterval(() => {
