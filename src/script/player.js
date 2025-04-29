@@ -228,15 +228,8 @@ function renderMusicInfo(music) {
 
 
     const audio = new Audio(music.music);
-    audio.addEventListener('loadedmetadata', () => {
-        time.textContent = formatTime(audio.duration);
-        musicInfo.appendChild(imgAndTextsContainer); 
-        musicInfo.appendChild(time); 
-    });
 
    
-    musicCard.appendChild(musicInfo);
-
     musicCard.addEventListener('click', () => {
         currentTime = 0;
         playMusic(music);
@@ -245,7 +238,17 @@ function renderMusicInfo(music) {
         togglePlayPause()
     });
 
-    boxMusicContainer.appendChild(musicCard);
+    audio.addEventListener('loadedmetadata', () => {
+        time.textContent = formatTime(audio.duration);
+    
+        musicInfo.appendChild(imgAndTextsContainer); 
+        musicInfo.appendChild(time); 
+        musicCard.appendChild(musicInfo);
+    
+        boxMusicContainer.appendChild(musicCard);
+    });
+    
+
 }
 
 
